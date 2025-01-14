@@ -1,0 +1,44 @@
+
+
+p {
+    font-size: large;
+    font-weight: bold;
+    color: rgb(19, 131, 93)
+}
+
+a {
+    font-size: large;
+    font-weight: bold;
+    color: rgb(19, 131, 93); 
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    margin: 0 auto;
+    width: 80%;
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    color: rgb(6, 101, 69);
+}
+
+.loginform {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 auto;
+    padding: 1em;
+    border: 2px solid #CCC;
+    border-radius: 1em;
+}
+
+button {
+    margin-top: 50px;
+    background-color: rgb(170, 186, 181);
+    border-radius: 0.5em;
+}
+
+.signupform {
+    align-items: baseline;
+}

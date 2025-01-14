@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% block content %}
+{% if user.is_authenticated %}
+Hi {{ user.username }}!
+
+
+<form class="categorylistform" action="{% url 'category_list'%}" method="post">
+    {% csrf_token %}
+    <button class="viewcatbtn" type="submit">View Categories</button>
+</form>
+
+<form class="logoutform" action="{% url 'logout' %}" method="post">
+  {% csrf_token %}
+  <button class="logoutbtn" type="submit">Log Out</button>
+</form>
+{% else %}
+<p>You are not logged in</p>
+<a href="{% url 'signup' %}">Sign Up</a><br>
+<a href="{% url 'login' %}">Log In</a>
+
+
+{% endif %}
+{% endblock %}
