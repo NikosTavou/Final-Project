@@ -61,7 +61,6 @@ def update_event(request, event_id):
         event.save()
         return redirect('category_list')
     else:
-        # Render update event page with event data
         return render(request, 'event_management_system_app/update_event.html', {'event': event})
 
 def category_list(request):
